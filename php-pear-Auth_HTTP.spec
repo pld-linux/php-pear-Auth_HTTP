@@ -5,7 +5,7 @@ Summary:	%{_class} - HTTP authentication system using PHP
 Summary(pl):	%{_class} - system uwierzytelniania HTTP przy u¿yciu PHP
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz

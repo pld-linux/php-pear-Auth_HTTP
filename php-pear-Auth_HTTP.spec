@@ -27,9 +27,9 @@ realm-based .htaccess authentication.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl
-Klasa PEAR::Auth_HTTP dostarcza metod do stworzenia autentykacji HTTP
-za pomoc± PHP, w sposób zbli¿ony do bazuj±cej na .htaccess autoryzacji
-Apache.
+Klasa PEAR::Auth_HTTP dostarcza metod do stworzenia uwierzytelniania
+HTTP za pomoc± PHP, w sposób zbli¿ony do opartego na .htaccess
+uwierzytelniania w Apache.
 
 Ta klasa ma w PEAR status: %{_status}.
 

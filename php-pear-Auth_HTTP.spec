@@ -1,5 +1,6 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Auth_HTTP
+%define		_status		stable
 %define		_pearname	%{_class}
 Summary:	%{_pearname} - HTTP authentication system using PHP
 Summary(pl):	%{_pearname} - system uwierzytelniania HTTP przy u¿yciu PHP
@@ -18,8 +19,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Methods for creating an HTTP authentication system using PHP.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Metody do tworzenia systemu uwierzytelniania HTTP przy u¿yciu PHP.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c

@@ -2,15 +2,15 @@
 %define		_class		Auth_HTTP
 %define		_pearname	%{_class}
 Summary:	%{_class} - HTTP authentication system using PHP
-Summary(pl):	%{_class} - system autentyfikacji przy u퓓ciu PHP
+Summary(pl):	%{_class} - system uwierzytelniania HTTP przy u퓓ciu PHP
 Name:		php-pear-%{_pearname}
 Version:	1.0
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-BuildRequires:	rpm-php-pearprov
 URL:		http://pear.php.net/
+BuildRequires:	rpm-php-pearprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Methods for creating an HTTP authentication system using PHP.
 
 %description -l pl
-Metody do tworzenia systemu autentyfikacji HTTP przy u퓓ciu PHP.
+Metody do tworzenia systemu uwierzytelniania HTTP przy u퓓ciu PHP.
 
 %prep
 %setup -q -c

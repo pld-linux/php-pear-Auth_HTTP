@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Auth_HTTP
 %define		_pearname	%{_class}
-Summary:	%{_class} - HTTP authentication system using PHP
-Summary(pl):	%{_class} - system uwierzytelniania HTTP przy u¿yciu PHP
+Summary:	%{_pearname} - HTTP authentication system using PHP
+Summary(pl):	%{_pearname} - system uwierzytelniania HTTP przy u¿yciu PHP
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	4

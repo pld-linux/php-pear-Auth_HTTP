@@ -1,16 +1,17 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Auth_HTTP
+%define		_class		Auth
+%define		_subclass	HTTP
 %define		_status		stable
-%define		_pearname	%{_class}
+%define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - HTTP authentication system using PHP
 Summary(pl):	%{_pearname} - system uwierzytelniania HTTP przy u¿yciu PHP
 Name:		php-pear-%{_pearname}
-Version:	1.0.1
-Release:	5
+Version:	2.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	4ee9c9d3b8e55a6a36543ce9507f25fe
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	ec9efa9e5df6d196776f491467f77a43
 URL:		http://pear.php.net/package/Auth_HTTP/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -34,7 +35,7 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
+install %{_pearname}-%{version}/%{_class}_%{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}.php
 
 %clean
 rm -rf $RPM_BUILD_ROOT

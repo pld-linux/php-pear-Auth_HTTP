@@ -48,7 +48,7 @@ Tests for PEAR::%{_pearname}.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
-cp -a ./%{php_pear_dir}/{.registry,*} $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT

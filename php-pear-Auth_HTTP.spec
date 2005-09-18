@@ -1,4 +1,5 @@
 %include	/usr/lib/rpm/macros.php
+%include	/usr/lib/rpm/macros.pear
 %define		_class		Auth
 %define		_subclass	HTTP
 %define		_status		beta
@@ -14,7 +15,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	d5209f0d1f1874e23b44fbfb397a2aa0
 URL:		http://pear.php.net/package/Auth_HTTP/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	php-pear-build
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,20 +34,31 @@ uwierzytelniania w Apache.
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{version}-%{release}
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}/%{_class}_%{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}.php
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+cp -a ./%{php_pear_dir}/{.registry,*} $RPM_BUILD_ROOT%{php_pear_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/tests
+%{php_pear_dir}/.registry/*.reg
 %dir %{php_pear_dir}/%{_class}
 %{php_pear_dir}/%{_class}/*.php
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*

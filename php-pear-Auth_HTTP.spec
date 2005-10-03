@@ -17,6 +17,7 @@ URL:		http://pear.php.net/package/Auth_HTTP
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear >= 4:1.0-8
 BuildArch:	noarch
+Requires:	php-pear-Auth >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

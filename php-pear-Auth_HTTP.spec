@@ -8,7 +8,7 @@ Summary:	%{_pearname} - HTTP authentication system using PHP
 Summary(pl):	%{_pearname} - system uwierzytelniania HTTP przy u¿yciu PHP
 Name:		php-pear-%{_pearname}
 Version:	2.1.6
-Release:	1.5
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz

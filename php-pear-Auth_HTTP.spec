@@ -15,6 +15,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	d5209f0d1f1874e23b44fbfb397a2aa0
 URL:		http://pear.php.net/package/Auth_HTTP
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear >= 4:1.0-8
 Requires:	php-pear-Auth >= 1.2.0

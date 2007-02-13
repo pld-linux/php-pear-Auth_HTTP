@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - HTTP authentication system using PHP
-Summary(pl.UTF-8):   %{_pearname} - system uwierzytelniania HTTP przy użyciu PHP
+Summary(pl.UTF-8):	%{_pearname} - system uwierzytelniania HTTP przy użyciu PHP
 Name:		php-pear-%{_pearname}
 Version:	2.1.6
 Release:	2
@@ -39,7 +39,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no

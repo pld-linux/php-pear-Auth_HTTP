@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	Auth_HTTP
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - HTTP authentication system using PHP
 Summary(pl.UTF-8):	%{pearname} - system uwierzytelniania HTTP przy użyciu PHP
 Name:		php-pear-%{pearname}
